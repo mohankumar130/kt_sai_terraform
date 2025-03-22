@@ -22,4 +22,3 @@ crash.log
 
 # Ignore system files (e.g., macOS or Windows-specific files)
 .DS_Store
-Thumbs.db
