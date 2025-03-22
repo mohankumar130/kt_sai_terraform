@@ -4,6 +4,6 @@ terraform {
     key            = "ck-dev-env.tfstate"
     use_lockfile   = true
     region         = "us-east-1"
-    profile        = "hometerraform"
+  
   }
 }
