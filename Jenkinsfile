@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID = credentials('aws-access-key')   // Use Jenkins credentials
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key')
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
         TF_VAR_file = "terraform.tfvars"
     }
@@ -11,6 +11,13 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/mohankumar130/kt_sai_terraform.git'
+            }
+        }
+
+        stage('Check AWS Credentials') {
+            steps {
+                sh 'env | grep AWS'   // Debug AWS env variables
+                sh 'aws sts get-caller-identity'  // Check AWS identity
             }
         }
 
