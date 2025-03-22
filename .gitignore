@@ -1,0 +1,25 @@
+# Ignore Terraform state files and backups
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform CLI configuration files
+.terraform/
+.terraform.lock.hcl
+
+# Ignore variable definition files that might contain sensitive data
+*.tfvars.json
+
+# Ignore crash logs
+crash.log
+
+# Ignore any logs or temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore sensitive files
+*.env
+
+# Ignore system files (e.g., macOS or Windows-specific files)
+.DS_Store
+Thumbs.db
