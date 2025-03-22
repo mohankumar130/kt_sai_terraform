@@ -1,4 +1,4 @@
 provider "aws" {
-  profile = "hometerraform"
+  # profile = "hometerraform"
   region  = "ap-south-1"
 }
